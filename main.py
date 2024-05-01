@@ -1,12 +1,8 @@
 import pygame as pg
 import sys
 from simulation import Simulation
-
-BACKGROUND_COLOR = (29, 29, 29)
-WINDOW_WIDTH = 750
-WINDOW_HEIGHT = 750
-CELL_SIZE = 25
-FPS = 12
+from events import event_management
+from definitions import WINDOW_HEIGHT, WINDOW_WIDTH, FPS, BACKGROUND_COLOR, CELL_SIZE
 
 pg.init()
 
@@ -25,7 +21,9 @@ while(True):
         if event.type == pg.QUIT:
             pg.quit()
             sys.exit()
-    
+        else:
+            event_management(simulation, event)
+
     # Update
     simulation.update()
     
