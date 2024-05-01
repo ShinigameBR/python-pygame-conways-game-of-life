@@ -12,7 +12,6 @@ pg.init()
 
 window = pg.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 window.fill(BACKGROUND_COLOR)
-
 pg.display.set_caption("Game of Life")
 
 clock = pg.time.Clock()
@@ -27,8 +26,12 @@ while(True):
             pg.quit()
             sys.exit()
     
+    # Update
+    simulation.update()
+    
     # Draw
     simulation.draw(window)
     
+    # Control
     pg.display.update()
     clock.tick(FPS)
