@@ -33,7 +33,7 @@ class Simulation:
             self.stop()
             self.grid.toggle_cell(row, column)
         
-    def draw(self, window: pg.Window):
+    def draw(self, window):
         self.grid.draw(window)
         
     def count_live_neighbors(self, grid: Grid, row: int, column: int):

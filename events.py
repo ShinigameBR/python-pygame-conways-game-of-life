@@ -2,7 +2,7 @@ import pygame as pg
 from simulation import Simulation
 from definitions import CELL_SIZE
 
-def event_management(simulation: Simulation, event: pg.Event):
+def event_management(simulation: Simulation, event: pg.event):
     
     if event.type == pg.MOUSEBUTTONDOWN:
         pos = pg.mouse.get_pos()

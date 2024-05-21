@@ -8,7 +8,7 @@ class Grid:
         self.cell_size = cell_size
         self.cells = [[0 for col in range(self.columns)] for row in range(self.rows)]
         
-    def draw(self, window: pg.Window):
+    def draw(self, window):
         for row in range(self.rows):
             for column in range(self.columns):
                 color = LIVE_CELL_COLOR if self.cells[row][column] else DEAD_CELL_COLOR
